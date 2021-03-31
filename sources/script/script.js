@@ -6,21 +6,44 @@ window.addEventListener('load', function() {
 	sideMenu = document.getElementById('sidemenu');
 	mainNav = document.getElementById('mainnav');
 
-	// Swipper constructor
+	// Home page specifics
 	//--------------------
-	new Swiper('header .swiper-container', {
-		direction: 'horizontal',
-		loop: true,
-		//autoplay: { delay: 5000 },
-		pagination: { el: '.swiper-pagination' },
-		navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
-	});
+	if (document.body.id == 'home') {
+		// Swippers construction
+		//----------------------
+		new Swiper('header .swiper-container', {
+			direction: 'horizontal',
+			loop: true,
+			autoplay: { delay: 5000 },
+			pagination: { el: '.swiper-pagination' },
+			navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', scale: 1.6 },
+		});
+		new Swiper('#review .swiper-container', {
+			direction: 'horizontal',
+			loop: true,
+			autoplay: { delay: 5000 },
+			pagination: { el: '.swiper-pagination' },
+			navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', scale: 1.6 },
+		});
 
+		// Youtube lightboxes initialisations
+		//-----------------------------------
+		$(function () {
+			$(".video-link").jqueryVideoLightning({
+				autoplay: 1,
+				backdrop_color: "#ddd",
+				backdrop_opacity: 0.6,
+				glow: 20,
+				glow_color: "#000"
+			});
+		});
+	}
+	
 	// Events processing
 	//------------------
 	document.getElementById('bgmenu').addEventListener('click', function() {
 		sideMenu.style.transform = 'translatex(0)';
-		hidder.style.zIndex = '20';
+		hidder.style.zIndex = '110';
 		hidder.style.opacity = '.5';
 	});
 	document.querySelector('#sidemenu .fa-times').addEventListener('click', function () {

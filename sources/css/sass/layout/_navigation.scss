@@ -1,3 +1,13 @@
+#mainnav, #sidemenu {
+	a {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: white;
+		&:hover { color: $base-hover-color !important; }
+	}
+}
 #mainnav {
 	position: fixed;
 	z-index: 100;
@@ -7,15 +17,13 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 15px;
-	border-top: 5px solid #ec1d25;
+	border-top: 5px solid $base-hover-color;
 	@include base-transition(.2s);
 	img { width: 100px; }
-	a {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 400;
-		font-size: 14px;
-		text-transform: uppercase;
-		color: white;
+	#logo {
+		width: 100px;
+		height: 45px;
+		background: url('../img/icons/logo.png') center/cover;
 	}
 	#navigation {
 		a { padding: 0 17px; }
@@ -33,39 +41,48 @@
 			width: 24px;
 			height: 15px;
 			margin-left: 20px;
+			cursor: pointer;
 			div {
 				width: 100%;
 				height: 2px;
 				background-color: white;
+				@include base-transition(.2s);
 			}
-		}
-	}
-	#sidemenu {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 390px;
-		height: 100vh;		
-		background-color: white;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		@include base-transition(.2s);
-		transform: translatex(100%);
-		i {
-			align-self: flex-end;
-			font-size: 30px;
-			margin: 20px 30px 50px 0;
-		}
-		a {
-			color: black;
-			&:not(:last-child) { margin-bottom: 20px; }
-			&:last-child { margin-top: 20px; }
+			&:hover div { background-color: $base-hover-color !important; }
 		}
 	}
 	&.scrolled {
 		height: 95px;
-		background-color: white;
+		background-color: rgba(255, 255, 255, .9);
 		a { color: black; }
+		#logo { background: url('../img/icons/logo2.png') center/cover; }
+		#socials #bgmenu div { background-color: black; }
 	}
+}
+#sidemenu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 120;
+	width: 390px;
+	height: 100vh;		
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include base-transition(.2s);
+	transform: translatex(100%);
+	i {
+		align-self: flex-end;
+		font-size: 30px;
+		margin: 20px 30px 50px 0;
+	}
+	a {
+		color: black;
+		&:not(:last-child) { margin-bottom: 20px; }
+		&:last-child { margin-top: 20px; }
+	}
+	i { @include base-transition(.2s); }
+	i:hover, a:hover { color: $base-hover-color; }
+		// &:hover div { background-color: $base-hover-color; }
 }

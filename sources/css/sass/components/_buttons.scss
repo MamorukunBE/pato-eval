@@ -1,0 +1,23 @@
+.btn {
+	background: white;
+   border-radius: 10px;
+	padding: 15px 25px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	@include base-transition(.3s);
+	&.ghost {
+		background: rgba(255, 255, 255, .9);
+		color: #333333 !important;
+	}
+	&.black {
+		background: black;
+		color: white !important;
+	}
+	&:hover {
+		background-color: #ec1d25;
+		color: white !important;
+	}
+}

@@ -32,7 +32,7 @@ gulp.task('sass-work', function () {
 });
 gulp.task('js-work', function JS_compressor() {
 	return pipeline(
-		gulp.src(sources + 'script/*.js'),
+		gulp.src(sources + 'script/**/*.js'),
 		uglify(),
 		rename({ extname: ".min.js" }),
 		gulp.dest(output + 'script/')
@@ -64,7 +64,7 @@ exports.default = () => (
 // Gulp launcher task
 //-------------------
 gulp.task('modifications-checker', gulp.series(
-	'favicon-work',
+	//'favicon-work',
 	'js-work',			// Pre-feed the output before initializing browser-sync
 	'sass-work',		//
 	'img-work',			//
@@ -72,7 +72,7 @@ gulp.task('modifications-checker', gulp.series(
 	gulp.parallel(
 		'browser-sync',
 		function sources_checker() {
-			gulp.watch(sources + 'script/*.js', gulp.series('js-work'));
+			gulp.watch(sources + 'script/**/*.js', gulp.series('js-work'));
 			gulp.watch(sources + 'css/**/*.scss', gulp.series('sass-work'));
 			gulp.watch(sources + '*.html', gulp.series('html-work'));
 			gulp.watch(sources + 'img/**/*.*', gulp.series('img-work'));
