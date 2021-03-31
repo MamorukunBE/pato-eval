@@ -1,0 +1,30 @@
+#home {
+		header {
+			.swiper-container {				
+				#slide_1 { background: url('../img/master-slides-01.jpg') center/cover; }
+				#slide_2 { background: url('../img/master-slides-02.jpg') center/cover; }
+				#slide_3 { background: url('../img/master-slides-03.jpg')  center/cover; }
+				.swiper-slide {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					p { margin: 0; }
+					p:first-child {
+						font-family: 'Courgette', cursive;
+						font-size: 60px;
+						margin-bottom: 10px;
+					}
+					p:nth-of-type(2) {
+						font-family: 'Poppins', sans-serif;
+						font-weight: 700;
+						font-size: 90px;
+						text-transform: uppercase;
+						letter-spacing: 10px;
+						margin-bottom: 35px;
+					}
+					.btn { color: #ec1d25; }
+				}
+		}
+	}
+}
