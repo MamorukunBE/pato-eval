@@ -7,7 +7,7 @@
 	<link rel="icon" type="image/gif/png" href="img/favicon.ico">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./css/styles.min.css">
@@ -34,7 +34,7 @@
 			<a href="#">Blog</a>
 			<a href="#">Contact</a>
 		</div>
-		<div id="socials">
+		<div class="socials">
 			<a href="#"><i class="fa fa-tripadvisor"></i></a>
 			<a href="#"><i class="fa fa-facebook"></i></a>
 			<a href="#"><i class="fa fa-twitter"></i></a>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</nav>
-	<a href="#" id="toplink"><i class="fa fa-angle-double-up"></i></a>
+	<a href="#top" id="toplink" class="ghost dark btn"><i class="fa fa-angle-double-up"></i></a>
 
 	<!-- Side menu -->
 	<nav id="sidemenu">
@@ -94,7 +94,7 @@
 				<h2>Italian Restaurant</h2>
 				<h3>Welcome</h3>
 				<p>Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.</p>
-				<a href="#">Our story <i class="fa fa-long-arrow-right"></i></a>
+				<a href="#" class="continue">Our story <i class="fa fa-long-arrow-right"></i></a>
 			</div>
 			<div>
 				<div class="zommableimg"><img src="./img/our-story-01.jpg" alt="Our story"></div>
@@ -113,31 +113,39 @@
 				<h2>Discover</h2>
 				<h3>Our menu</h3>
 				<div id="menuitems">
-					<div class="zommableimg">
-						<img src="./img/our-menu-01.jpg" alt="Menu 1">
-						<a class="ghost btn" href="#">Lunch</a>
+					<div class="menuitem">
+						<div class="zommableimg">
+							<img src="./img/our-menu-01.jpg" alt="Menu 1">
+							<a class="ghost btn" href="#">Lunch</a>
+						</div>
 					</div>
-					<div class="zommableimg">
-						<img src="./img/our-menu-05.jpg" alt="Menu 5">
-						<a class="ghost btn" href="#">Dinner</a>
+					<div class="menuitem">
+						<div class="zommableimg">
+							<img src="./img/our-menu-05.jpg" alt="Menu 5">
+							<a class="ghost btn" href="#">Dinner</a>
+						</div>
 					</div>
-					<div class="groupeditems">
-						<div class="zommableimg ramassee">
+					<div class="menuitem groupeditems">
+						<div class="zommableimg">
 							<img src="./img/our-menu-08.jpg" alt="Menu 8">
 							<a class="ghost btn" href="#">Drink</a>
 						</div>
-						<div class="zommableimg ramassee">
+						<div class="zommableimg">
 							<img src="./img/our-menu-10.jpg" alt="Menu 10">
 							<a class="ghost btn" href="#">Starters</a>
 						</div>
 					</div>
-					<div class="zommableimg maigre ramassee">
-						<img src="./img/our-menu-13.jpg" alt="Menu 13">
-						<a class="ghost btn" href="#">Happy hour</a>
+					<div class="menuitem maigre">
+						<div class="zommableimg">
+							<img src="./img/our-menu-13.jpg" alt="Menu 13">
+							<a class="ghost btn" href="#">Happy hour</a>
+						</div>
 					</div>
-					<div class="zommableimg ramassee">
-						<img src="./img/our-menu-16.jpg" alt="Menu 16">
-						<a class="ghost btn" href="#">Dessert</a>
+					<div class="menuitem">
+						<div class="zommableimg">
+							<img src="./img/our-menu-16.jpg" alt="Menu 16">
+							<a class="ghost btn" href="#">Dessert</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -187,18 +195,83 @@
 		</div>
 	</section>
 
-	<!-- Discover section -->
+	<!-- Video section -->
 	<section id="video">
 		<header class="parallax-window" data-parallax="scroll" data-image-src="./img/bg-cover-video-02.jpg">
-			<div>
+			<!-- <div> -->
 				<h2>Discover</h2>
 				<h3>Our video</h3>
 				<span href="#" class="video-link" data-video-id="y-PKffm2uI4dk"><i class="fa fa-play"></i></span>
-			</div>
+			<!-- </div> -->
 		</header>
 	</section>
 
-	<script>
-	</script>
+	<!-- Blog section -->
+	<section id="blog">
+		<div class="wrapper">
+			<h2>Latest News</h2>
+			<h3>The blog</h3>
+			<div id="blogitems">
+				<div class="blogitem">
+					<div class="zommableimg">
+						<img src="./img/blog-01.jpg" alt="Blog 1">
+						<p class="ghoul btn">21 Dec 2017</p>
+					</div>
+					<h4>Best places for wine</h4>
+					<p>Phasellus lorem enim, luctus ut velit eget, convallis egestas eros.</p>
+					<a href="#" class="continue">Continue reading <i class="fa fa-long-arrow-right"></i></a>
+				</div>
+				<div class="blogitem">
+					<div class="zommableimg">
+						<img src="./img/blog-02.jpg" alt="Blog 1">
+						<p class="ghoul btn">15 Dec 2017</p>
+					</div>
+					<h4>Eggs and cheese</h4>
+					<p>Duis elementum, risus sit amet lobortis nunc justo condimentum ligula, vitae feugiat</p>
+					<a href="#" class="continue">Continue reading <i class="fa fa-long-arrow-right"></i></a>
+				</div>
+				<div class="blogitem">
+					<div class="zommableimg">
+						<img src="./img/blog-03.jpg" alt="Blog 1">
+						<p class="ghoul btn">12 Dec 2017</p>
+					</div>
+					<h4>Style the wedding party</h4>
+					<p>Sed ornare ligula eget tortor tempor, quis porta tellus dictum.</p>
+					<a href="#" class="continue">Continue reading <i class="fa fa-long-arrow-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Footer -->
+	<footer>
+		<div class="top">
+			<div class="wrapper">
+				<div id="contact">
+					<h4>Contact us</h4>
+					<address><i class="fa fa-map-marker"></i> 8th floor, 379 Hudson St, New York, NY 10018</address>
+					<a href="tel:+1967166879"><i class="fa fa-phone"></i> (+1) 96 716 6879</a>
+					<a href="mailto:contact@site.com"><i class="fa fa-envelope"></i> contact@site.com</a>
+				</div>
+				<div id="times">
+					<h4>Opening times</h4>
+					<p>09:30 AM – 11:00 PM</p>
+					<p>Every Day</p>				
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="wrapper">
+				<div class="socials">
+					<a href="#"><i class="fa fa-tripadvisor"></i></a>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+				</div>
+				<div id="copyright">
+					<p>Copyright © 2018 All rights reserved | This template is made with <i class="fa fa-heart"></i> by <a href="#">Colorlib</a> and modified with <i class="fa fa-heart"></i> by Rhumy</p>					
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

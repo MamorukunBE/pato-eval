@@ -1,17 +1,4 @@
 #home {
-	#toplink {
-		position: fixed;
-		z-index: 100;
-		bottom: 40px;
-		right: 40px;
-		background-color: rgba(0, 0, 0, .5);
-		border-radius: 4px;
-		i {
-			font-size: 22px;
-			color: white;
-			margin: 10px 13px;
-		}
-	}
 	&>header {
 		height: 100vh;
 		.swiper-container {				
@@ -23,7 +10,11 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				p { margin: 0; }
+				p {
+					color: white;
+					line-height: 1;
+					margin: 0;
+				}
 				p:first-child {
 					font-family: 'Courgette', cursive;
 					font-size: 60px;
@@ -37,15 +28,18 @@
 					letter-spacing: 10px;
 					margin-bottom: 35px;
 				}
-				.btn { color: #ec1d25; }
+				.btn { color: $base-hover-color; }
 			}
 		}
 	}
 	#welcome {
 		margin-top: 105px;
 		.wrapper {
+			align-items: center;
+			@media screen and (max-width: 766px) { flex-direction: column; }
 			&>div {
 				width: 50%;
+				@media screen and (max-width: 766px) { width: 80%; }
 				&:first-child {
 					display: flex;
 					flex-direction: column;
@@ -53,27 +47,13 @@
 					align-items: center;
 					padding: 0 30px;
 					h3 { margin-bottom: 20px; }
-					p {
-						text-align: center;
-						color: #666666;
-						font-size: 15px;
-						line-height: 1.7;
-					}
-					a {
-						font-family: 'Montserrat', sans-serif;
-						font-weight: 400;
-						color: #222;
-						text-transform: uppercase;
-						font-size: 12px;
-						letter-spacing: 1px;
-						margin-top: 10px;
-						i { margin-left: .3rem; }
-					}
+					p { text-align: center; }
 				}
 			}
 			.zommableimg {
 				width: 390px;
 				height: 390px;
+				@media screen and (max-width: 766px) { margin-top: 25px; }
 			}
 		}
 	}
@@ -81,10 +61,7 @@
 		padding-top: 120px;
 		header {
 			height: 390px;
-			h3 {
-				color: white;
-				letter-spacing: 10px;
-			}
+			h3 { color: white; }
 		}
 		#menu {
 			padding-top: 115px;
@@ -92,18 +69,22 @@
 				flex-direction: column;
 				align-items: center;
 				#menuitems {
-				padding-top: 15px;
+					padding-top: 15px;
 					display: flex;
 					justify-content: flex-start;
 					align-items: flex-start;
 					flex-wrap: wrap;
-					.zommableimg {
-						width: 360px;
-						height: 480px;
-						margin: 0 15px;
-						margin-top: 30px;
-						&.ramassee { height: 225px; }
-						&.maigre { width: 750px; }
+					.menuitem {
+						width: 33%;
+						@media screen and (max-width: 766px) { width: 50%; }
+						&.maigre { width: 66%; }
+						&.groupeditems, &:last-of-type, &.maigre {
+							@media screen and (max-width: 766px) { width: 100%; }
+						}
+						.zommableimg {
+							margin: 0 15px;
+							margin-top: 30px;
+						}
 					}
 					a {
 						position: absolute;
@@ -139,7 +120,7 @@
 				p {
 					font-size: 18px;
 					line-height: 1.7;
-					color: #666666;
+					color: $devil-color;
 					margin: 0;
 				}
 				p:nth-of-type(1) { margin-top: 30px; }
@@ -186,26 +167,61 @@
 				height: 100%;
 				background-color: rgba(0, 0, 0, .5);
 			}
-			&>div {
-				position: relative;
-				text-align: center;
-				h3 {
+			&>* { position: relative; }
+			h3 {
+				color: white;
+				margin-bottom: 40px;
+				letter-spacing: 10px;
+			}
+			i {
+				font-size: 18px;
+				padding: 25px 27px;
+				border-radius: 50%;
+				color: $sombre-color;
+				background-color: white;
+				@include base-transition(.3s);
+				&:hover {
+					transform: scale(1.2);
 					color: white;
-					margin-bottom: 40px;
-					letter-spacing: 10px;
+					background-color: rgba(236,29,37,0.5);
 				}
-				i {
-					font-size: 18px;
-					padding: 25px 27px;
-					border-radius: 50%;
-					color: #222222;
-					background-color: white;
-					@include base-transition(.3s);
-					&:hover {
-						transform: scale(1.2);
-						color: white;
-						background-color: rgba(236,29,37,0.5);
+			}
+		}
+	}
+	#blog {
+		padding-top: 105px;
+		padding-bottom: 120px;
+		background-color: white;
+		text-align: center;
+		.wrapper {
+			flex-direction: column;
+			#blogitems {
+				margin-top: 50px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				text-align: left;				
+				.blogitem {
+					width: 31.5%;
+					@media screen and (max-width: 766px) {
+						width: 100%;
+						&:not(:first-of-type) { margin-top: 30px; }
 					}
+					.zommableimg {
+						width: 100%;
+						.btn {
+							position: absolute;
+							left: 10px;
+							bottom: 10px;
+							font-size: 12px;
+							padding: 6px 12px;
+							border-radius: 5px;
+							margin: 0;
+							text-transform: none;
+						}
+					}
+					h4 { margin-top: 30px; }
+					p { margin-bottom: 30px; }
 				}
 			}
 		}

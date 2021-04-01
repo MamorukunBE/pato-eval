@@ -8,6 +8,10 @@
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	@include base-transition(.3s);
+	&.ghoul {
+		background: rgba(0, 0, 0, .5);
+		color: white !important;
+	}
 	&.ghost {
 		background: rgba(255, 255, 255, .9);
 		color: #333333 !important;
@@ -17,7 +21,7 @@
 		color: white !important;
 	}
 	&:hover {
-		background-color: #ec1d25;
+		background-color: #ec1d25 !important;
 		color: white !important;
 	}
 }
