@@ -48,7 +48,7 @@ p, a, address {
 a {
 	text-decoration: none;
 	@include base-transition(.2s);
-	i { @include base-transition(.2s); }
+	i { @include base-transition(.05s); }
 	&:hover, &:hover i { color: $base-hover-color !important; }
 	&.continue {
 		color: #222;

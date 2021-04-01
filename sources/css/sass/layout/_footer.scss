@@ -1,5 +1,6 @@
 footer {
 	* { color: $ghost-color; }
+	i { @include base-transition(.2s); }
 	.top {
 		padding-top: 80px;
 		padding-bottom: 120px;

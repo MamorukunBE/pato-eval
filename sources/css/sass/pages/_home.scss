@@ -6,12 +6,7 @@
 			#slide_2 { background: url('../img/master-slides-02.jpg') center/cover; }
 			#slide_3 { background: url('../img/master-slides-03.jpg')  center/cover; }
 			.swiper-slide {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
 				p {
-					color: white;
 					line-height: 1;
 					margin: 0;
 				}
@@ -20,11 +15,8 @@
 					font-size: 60px;
 					margin-bottom: 10px;
 				}
-				p:nth-of-type(2) {
-					font-family: 'Poppins', sans-serif;
-					font-weight: 700;
+				h2 {
 					font-size: 90px;
-					text-transform: uppercase;
 					letter-spacing: 10px;
 					margin-bottom: 35px;
 				}

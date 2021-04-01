@@ -1,0 +1,15 @@
+#contact {
+	&>header {
+		height: 545px;
+		.swiper-container {				
+			#slide_1 { background: url('../img/bg-title-page-02.jpg') center/cover; }
+			.swiper-slide {
+				h2 {
+					font-size: 50px;
+					letter-spacing: 6px;
+					padding-top: 50px;
+				}
+			}
+		}
+	}
+}
