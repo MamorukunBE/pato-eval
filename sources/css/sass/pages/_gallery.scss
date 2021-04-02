@@ -26,7 +26,7 @@
 				align-items: center;
 				margin-top: 100px;
 				margin-bottom: 70px;
-				@media screen and (max-width: 557px) { flex-direction: column; }
+				@media screen and (max-width: $resp_S) { flex-direction: column; }
 				.btn {
 					background-color: unset;
 					font-family: 'Poppins', sans-serif;
@@ -47,10 +47,10 @@
 				.grid-sizer::before, .grid-item::before { background-color: unset !important; }
 				.gutter-sizer { width: 2%; }
 				.grid-sizer, .grid-item { width: 32%; }
-				@media screen and (max-width: 766px) {
+				@media screen and (max-width: $resp_M) {
 					.grid-sizer, .grid-item { width: 49%; }
 				}
-				@media screen and (max-width: 557px) {
+				@media screen and (max-width: $resp_S) {
 					.grid-sizer, .grid-item { width: 100%; }
 				}
 				.grid-item {

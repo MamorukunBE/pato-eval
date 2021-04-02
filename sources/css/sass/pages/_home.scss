@@ -28,10 +28,10 @@
 		margin-top: 105px;
 		.wrapper {
 			align-items: center;
-			@media screen and (max-width: 766px) { flex-direction: column; }
+			@media screen and (max-width: $resp_M) { flex-direction: column; }
 			&>div {
 				width: 50%;
-				@media screen and (max-width: 766px) { width: 80%; }
+				@media screen and (max-width: $resp_M) { width: 80%; }
 				&:first-child {
 					display: flex;
 					flex-direction: column;
@@ -45,7 +45,7 @@
 			.zommableimg {
 				width: 390px;
 				height: 390px;
-				@media screen and (max-width: 766px) { margin-top: 25px; }
+				@media screen and (max-width: $resp_M) { margin-top: 25px; }
 			}
 		}
 	}
@@ -68,10 +68,10 @@
 					flex-wrap: wrap;
 					.menuitem {
 						width: 33%;
-						@media screen and (max-width: 766px) { width: 50%; }
+						@media screen and (max-width: $resp_M) { width: 50%; }
 						&.maigre { width: 66%; }
 						&.groupeditems, &:last-of-type, &.maigre {
-							@media screen and (max-width: 766px) { width: 100%; }
+							@media screen and (max-width: $resp_M) { width: 100%; }
 						}
 						.zommableimg {
 							margin: 0 15px;
@@ -195,7 +195,7 @@
 				text-align: left;				
 				.blogitem {
 					width: 31.5%;
-					@media screen and (max-width: 766px) {
+					@media screen and (max-width: $resp_M) {
 						width: 100%;
 						&:not(:first-of-type) { margin-top: 30px; }
 					}

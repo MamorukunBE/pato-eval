@@ -5,6 +5,17 @@
 		padding: 0 12px;
 	}
 }
+#hidder {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0;
+	@include base-transition(.2s);
+}
 #mainnav, #sidemenu, .socials {
 	a {
 		font-family: 'Montserrat', sans-serif;
@@ -24,9 +35,10 @@
 	align-items: center;
 	padding: 0 15px;
 	border-top: 5px solid $base-hover-color;
+	background: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0));
 	@include base-transition(.2s);
-	@media screen and (max-width: 992px) { height: 100px; }
-	@media screen and (max-width: 557px) { height: 80px; }
+	@media screen and (max-width: $resp_L) { height: 100px; }
+	@media screen and (max-width: $resp_S) { height: 80px; }
 	img { width: 100px; }
 	#logo {
 		width: 100px;
@@ -35,7 +47,7 @@
 	}
 	#navigation {
 		a { padding: 0 17px; }
-		@media screen and (max-width: 992px) { display: none; }
+		@media screen and (max-width: $resp_L) { display: none; }
 	}
 	.socials {
 		align-items: center;
@@ -50,7 +62,7 @@
 			div {
 				width: 100%;
 				height: 2px;
-				background-color: white;
+				background: white;
 				@include base-transition(.2s);
 			}
 			&:hover div { background-color: $base-hover-color !important; }
@@ -58,7 +70,9 @@
 	}
 	&.scrolled {
 		height: 95px;
-		background-color: rgba(255, 255, 255, .9);
+		@media screen and (max-width: $resp_L) { height: 90px; }
+		@media screen and (max-width: $resp_S) { height: 70px; }
+		background: rgba(255, 255, 255, .9);
 		a { color: black; }
 		#logo { background: url('../img/icons/logo2.png') center/cover; }
 		.socials #bgmenu div { background-color: black; }
@@ -69,6 +83,7 @@
 	top: 0;
 	right: 0;
 	z-index: 120;
+	max-width: 100vw;
 	width: 390px;
 	height: 100vh;		
 	background-color: white;
@@ -81,6 +96,8 @@
 		align-self: flex-end;
 		font-size: 30px;
 		margin: 20px 30px 50px 0;
+		@include base-transition(.2s);
+		&:hover { color: $base-hover-color !important; }
 	}
 	a {
 		color: black;

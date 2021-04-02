@@ -55,6 +55,10 @@ window.addEventListener('load', function() {
 		// Local constructions
 		//--------------------
 		headerSwipperOptions = { direction: 'horizontal' };
+
+		// Local events processing
+		//------------------------
+		document.getElementById('sendmsg').addEventListener('click', function (e) { alert("TODO"); });
 	}
 
 	// Header swippers construction
